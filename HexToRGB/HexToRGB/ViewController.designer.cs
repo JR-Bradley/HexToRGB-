@@ -19,7 +19,7 @@ namespace HexToRGB
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton convertButton { get; set; }
+        UIKit.UIButton buttonNew { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -33,9 +33,9 @@ namespace HexToRGB
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel redValueLabel { get; set; }
 
-        [Action ("ConvertButton_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void ConvertButton_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UITextField txtInput { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -44,9 +44,9 @@ namespace HexToRGB
                 blueValueLabel = null;
             }
 
-            if (convertButton != null) {
-                convertButton.Dispose ();
-                convertButton = null;
+            if (buttonNew != null) {
+                buttonNew.Dispose ();
+                buttonNew = null;
             }
 
             if (greenValueLabel != null) {
@@ -62,6 +62,11 @@ namespace HexToRGB
             if (redValueLabel != null) {
                 redValueLabel.Dispose ();
                 redValueLabel = null;
+            }
+
+            if (txtInput != null) {
+                txtInput.Dispose ();
+                txtInput = null;
             }
         }
     }
